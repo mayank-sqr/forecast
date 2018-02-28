@@ -1,0 +1,3 @@
+export const API_KEY = '37339bc57f554376ab4172217182602';
+export const WEATHER_API = process.env.REACT_APP_WEATHER_APP_SERVER;
+

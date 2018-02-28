@@ -1,0 +1,11 @@
+.featured-img {
+  background: url("https://i.imgur.com/qviqt8w.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  min-height: 400px; }
+
+.weather-info {
+  text-align: center; }
+  .weather-info .highlight {
+    color: red;
+    font-size: 18px; }
