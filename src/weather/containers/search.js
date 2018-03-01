@@ -4,6 +4,9 @@ import {
 	doFetchWeather
 } from '../actions/doFetchWeather'
 
+import GridLayout from '../components/GridLayout'
+
+
 class KeywordTerm extends Component {
 	constructor(props) {
 		super(props);
@@ -32,23 +35,27 @@ class KeywordTerm extends Component {
 
 	render() {
 		return (
-			<form onSubmit={this.onFormSubmit} autoComplete="off" className="input-group">
-				<input 
-				className="form-control search-box text-center"
-				name="search"
-				type="text"
-				placeholder="Enter Search term"
-				value={this.state.term}
-				onChange={this.onInputChange}
-				/>	
-				<span className="input-group-btn">
-					<button
-					type="submit"
-					className="btn btn-primary">
-					Submit
-					</button>
-				</span>
-			</form>	
+			<div className="grid-box">
+				<form onSubmit={this.onFormSubmit} autoComplete="off" className="input-group">
+					<input 
+					className="form-control search-box text-center"
+					name="search"
+					type="text"
+					placeholder="Enter Search term"
+					value={this.state.term}
+					onChange={this.onInputChange}
+					/>	
+					<span className="input-group-btn">
+						<button
+						type="submit"
+						className="btn btn-primary">
+						Submit
+						</button>
+					</span>
+				</form>	
+			
+				<GridLayout {...this.props} />
+			</div>
 		);
 	}
 }
