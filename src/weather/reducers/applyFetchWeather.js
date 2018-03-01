@@ -11,7 +11,7 @@ let initialState = {
 
 function applyFetchWeather(state = initialState, action) {
 
-	console.log('@action in reducer =>', action)
+	// console.log('@action in reducer =>', action)
 	switch(action.type) {
 
 		case FETCH_CITYWEATHER_REQUEST:
@@ -23,8 +23,9 @@ function applyFetchWeather(state = initialState, action) {
 				isLoading: false
 			})
 		case FETCH_CITYWEATHER_SUCCESS:
+		console.log('@action after success =>', action.response)
 			return Object.assign({}, state, {
-				weather: action.response.data,
+				weather: action.response,
 				isLoading:false
 			})
 			default:

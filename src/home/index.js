@@ -14,7 +14,7 @@ class Home extends Component {
 							<div className="weather-info">
 								<h1>Welcome to Forecast Conditions</h1>
 								<p>Forecast is the day-to-day or hour-to-hour change in the atmosphere. Here we are providing 5 days forecast depending on your city.</p>
-								<p>You can search your city on provided searchbar to get next 5 days forecast conditions and set your plan accordingly.</p>
+								<p>You can search your city on provided searchbar on Weather nav to get next 5 days forecast conditions and set your plan accordingly.</p>
 								<p className="highlight">Happy Coding.... cheers!!!</p>
 							</div>
 						</Col>
