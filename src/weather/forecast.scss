@@ -1,0 +1,33 @@
+
+.detail-regional-forecast {
+
+	.table {
+		thead,
+		tbody {
+			th, td {
+				vertical-align: middle;
+				text-align: center;
+			}
+
+		}
+	}
+
+	.climate-fig {
+		display: inline-block;
+	}
+
+	.city-name {
+		text-align: center;
+		margin: 20px 0 0 0;
+		text-transform: uppercase;
+		padding: 6px 0;
+		background: #000;
+		color: #fff;
+
+		p {
+			margin: 0;	
+		}
+	}
+
+
+}

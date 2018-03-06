@@ -26,7 +26,7 @@ export default function epicFetchWeather(action$, store) {
 			arrayFormat: 'index'
 		})
 
-		// Return new `action` object with new key `newcity` to call API
+		// Return new `action` object with new key `newcity` to call API also known as DeepCoying Concept
 		return Object.assign({}, action, {
 			newcity
 		})

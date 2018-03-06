@@ -34,6 +34,13 @@ class KeywordTerm extends Component {
 	}
 
 	render() {
+		/*let grids = <span />;
+		
+		if(this.props.weather) {
+			grids = <GridLayout {...this.props} />
+		}*/
+		
+
 		return (
 			<div className="grid-box">
 				<form onSubmit={this.onFormSubmit} autoComplete="off" className="input-group">
@@ -41,7 +48,7 @@ class KeywordTerm extends Component {
 					className="form-control search-box text-center"
 					name="search"
 					type="text"
-					placeholder="Enter Search term"
+					placeholder="Enter City Name"
 					value={this.state.term}
 					onChange={this.onInputChange}
 					/>	
@@ -53,10 +60,13 @@ class KeywordTerm extends Component {
 						</button>
 					</span>
 				</form>	
-			
+				
+
 				<GridLayout {...this.props} />
+
 			</div>
 		);
+
 	}
 }
 
