@@ -3,9 +3,6 @@ import { connect } from 'react-redux'
 import {
 	doFetchWeather
 } from '../actions/doFetchWeather'
-import {
-	doGetInitialForecast
-} from '../actions/doGetInitialForecast';
 
 import ListLayout from '../components/ListLayout'
 
