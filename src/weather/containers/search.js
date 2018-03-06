@@ -3,8 +3,11 @@ import { connect } from 'react-redux'
 import {
 	doFetchWeather
 } from '../actions/doFetchWeather'
+import {
+	doGetInitialForecast
+} from '../actions/doGetInitialForecast';
 
-import GridLayout from '../components/GridLayout'
+import ListLayout from '../components/ListLayout'
 
 
 class KeywordTerm extends Component {
@@ -33,11 +36,15 @@ class KeywordTerm extends Component {
 		this.setState({ term: ''})
 	}
 
+	componentDidMount() {
+		this.props.onSubmitClick(this.props.q)
+	}
+
 	render() {
 		/*let grids = <span />;
 		
 		if(this.props.weather) {
-			grids = <GridLayout {...this.props} />
+			grids = <ListLayout {...this.props} />
 		}*/
 		
 
@@ -62,7 +69,7 @@ class KeywordTerm extends Component {
 				</form>	
 				
 
-				<GridLayout {...this.props} />
+				<ListLayout {...this.props} />
 
 			</div>
 		);

@@ -25,6 +25,7 @@ function applyGetInitialForecast(state = initialState, action) {
 			})
 
 		case WEATHER_REQUEST_SUCCESS: 
+		console.log('@action inside reducer success =>', action.response)
 			return Object.assign({}, state, {
 				defaultClimate: action.response,
 				isLoading: false

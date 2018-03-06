@@ -14,7 +14,6 @@ export function doFetchWeather(city) {
 }
 
 export function doFetchWeatherFulfilled(payload) {
-	console.log('@payload inside action =>', payload)
 	return {
 		type: FETCH_CITYWEATHER_SUCCESS,
 		response: payload.response

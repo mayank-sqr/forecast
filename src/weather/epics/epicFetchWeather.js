@@ -19,13 +19,12 @@ export default function epicFetchWeather(action$, store) {
 	.map(function(action) {
 
 		let newcity = {
-			q: action.city,
+			q: action.city ? action.city : 'pune',
 			days: 5
 		}
 		newcity = queryString.stringify(newcity, {
 			arrayFormat: 'index'
 		})
-
 		// Return new `action` object with new key `newcity` to call API also known as DeepCoying Concept
 		return Object.assign({}, action, {
 			newcity

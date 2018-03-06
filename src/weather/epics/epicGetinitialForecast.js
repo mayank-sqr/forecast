@@ -19,7 +19,8 @@ export function epicGetInitialForecast(action$, store) {
 		.ofType(WEATHER_REQUEST_START)
 		.map(function(action) {
 			let defaultCity = {
-				q: 'pune'
+				q: 'pune',
+				days: 5
 			}
 			defaultCity = queryString.stringify(defaultCity, {
 				arrayFormat: 'index'
@@ -33,7 +34,7 @@ export function epicGetInitialForecast(action$, store) {
 		}) 
 
 		.mergeMap(action => 
-			ajax.get(`/v1/search.json?${action.defaultCity}&key=${constant.API_KEY}`)
+			ajax.get(`/v1/forecast.json?${action.defaultCity}&key=${constant.API_KEY}`)
 			.map(response => doInitialForecastFullfiled(response))
 			.catch(error => Observable.of({
 				type: WEATHER_REQUEST_FAILURE,
