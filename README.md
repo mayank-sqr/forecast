@@ -31,3 +31,9 @@ for more refer `package.json`
 ## Styling
 
 I have used `scss` Preprocessor.
+
+## Dependency
+
+To Run this application on your machine you need to install one addon depend on your browser. If you are using chrome [Allow-Control-Allow-Origin](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en) and If you are using firefox than use [CORS Everywhere](https://addons.mozilla.org/en-US/firefox/addon/cors-everywhere/) and Enable it. This is because API does not support CORS Request and it throws preflight error.
+
+
