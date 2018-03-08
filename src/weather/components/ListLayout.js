@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 import _ from 'lodash';
 import ReactImageFallback from "react-image-fallback";
 
 class ListLayout extends Component {
-	constructor(props) {
-		super(props)
-	}
+
 	render() {
 
 		const climate = this.props.weather;
-		console.log('@climate =>', climate)
+
 		if(_.isEmpty(climate)) {
 			return null
 		}

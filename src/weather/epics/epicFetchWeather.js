@@ -3,7 +3,6 @@ import 'rxjs/add/operator/catch'
 import { Observable } from 'rxjs/Observable'
 import * as constant from '../../constant'
 import queryString from 'query-string'
-
 import {
 	FETCH_CITYWEATHER_REQUEST,
 	FETCH_CITYWEATHER_FAILURE
@@ -13,10 +12,13 @@ import {
 	doFetchWeatherFulfilled
 } from '../actions/doFetchWeather'
 
+// var NodeGeocoder = require('node-geocoder');
+
 
 export default function epicFetchWeather(action$, store) {
 	return action$.ofType(FETCH_CITYWEATHER_REQUEST)
 	.map(function(action) {
+
 
 		let newcity = {
 			q: action.city ? action.city : 'pune',
