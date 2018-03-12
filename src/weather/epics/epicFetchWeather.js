@@ -19,9 +19,9 @@ export default function epicFetchWeather(action$, store) {
 	return action$.ofType(FETCH_CITYWEATHER_REQUEST)
 	.map(function(action) {
 
-
+		action.city = action.city || window.city 
 		let newcity = {
-			q: action.city ? action.city : 'pune',
+			q: action.city,
 			days: 5
 		}
 		newcity = queryString.stringify(newcity, {
